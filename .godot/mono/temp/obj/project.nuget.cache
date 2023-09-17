@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "nout7ykWAAyqTu7ZjUKVs8PyrppbaCAIpx8v0uOTOKJqH4GDdp131AKXXbv/ChrXTQ5LRXdQkdCdc8LcYnf4mg==",
+  "success": true,
+  "projectFilePath": "/Users/developer/Documents/Development/Godot/NinjaAdventure/NinjaAdventure.csproj",
+  "expectedPackageFiles": [
+    "/Users/developer/.nuget/packages/godot.sourcegenerators/4.1.0/godot.sourcegenerators.4.1.0.nupkg.sha512",
+    "/Users/developer/.nuget/packages/godotsharp/4.1.0/godotsharp.4.1.0.nupkg.sha512",
+    "/Users/developer/.nuget/packages/godotsharpeditor/4.1.0/godotsharpeditor.4.1.0.nupkg.sha512",
+    "/Users/developer/.nuget/packages/microsoft.netcore.app.ref/6.0.11/microsoft.netcore.app.ref.6.0.11.nupkg.sha512",
+    "/Users/developer/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.11/microsoft.aspnetcore.app.ref.6.0.11.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,15 @@
+Timer
+Node
+Node2D
+MarginContainer
+TextureProgressBar
+NinePatchRect
+Label
+HBoxContainer
+VBoxContainer
+AnimationTree
+AnimationPlayer
+Sprite2D
+CollisionShape2D
+CharacterBody2D
+RigidBody2D

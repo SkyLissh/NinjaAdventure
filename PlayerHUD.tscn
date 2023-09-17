@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://bf73vacivhup6"]
+
+[ext_resource type="Script" path="res://Scripts/HUD/PlayerHud.cs" id="1_2gse5"]
+[ext_resource type="Texture2D" uid="uid://cwtv3hvt8nqdq" path="res://Assets/Actor/Characters/GreenNinja/Faceset.png" id="1_f77xa"]
+[ext_resource type="PackedScene" uid="uid://t4ovdrfx1ocq" path="res://Widgets/LifeBar.tscn" id="2_ygkqf"]
+[ext_resource type="PackedScene" uid="uid://clh1fqmkfbbot" path="res://Widgets/MannaBar.tscn" id="3_77ban"]
+
+[node name="PlayerHud" type="MarginContainer" node_paths=PackedStringArray("LifeBar", "MannaBar")]
+offset_right = 464.0
+offset_bottom = 100.0
+size_flags_horizontal = 0
+size_flags_vertical = 4
+script = ExtResource("1_2gse5")
+LifeBar = NodePath("HBoxContainer/Bars/LifeBar")
+MannaBar = NodePath("HBoxContainer/Bars/MannaBar")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+alignment = 1
+
+[node name="NinePatchRect" type="NinePatchRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("1_f77xa")
+region_rect = Rect2(0, 0, 38, 38)
+
+[node name="Bars" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 15
+
+[node name="LifeBar" parent="HBoxContainer/Bars" instance=ExtResource("2_ygkqf")]
+layout_mode = 2
+
+[node name="MannaBar" parent="HBoxContainer/Bars" instance=ExtResource("3_77ban")]
+layout_mode = 2

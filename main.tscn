@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bcrkry3tgayyo"]
+
+[ext_resource type="Script" path="res://Scripts/Level.cs" id="1_a10lm"]
+[ext_resource type="PackedScene" uid="uid://xng4kcqtkqps" path="res://Player.tscn" id="1_ynbnj"]
+[ext_resource type="PackedScene" uid="uid://bf73vacivhup6" path="res://PlayerHUD.tscn" id="2_1gkgk"]
+
+[node name="Node" type="Node" node_paths=PackedStringArray("Player", "PlayerSpawnPoint")]
+script = ExtResource("1_a10lm")
+Player = NodePath("Player")
+PlayerSpawnPoint = NodePath("SpawnPoint")
+
+[node name="Player" parent="." instance=ExtResource("1_ynbnj")]
+position = Vector2(464, 325)
+
+[node name="PlayerHud" parent="." instance=ExtResource("2_1gkgk")]
+
+[node name="SpawnPoint" type="Node2D" parent="."]
+position = Vector2(641, 335)
+
+[connection signal="LifeChanged" from="Player" to="PlayerHud" method="OnLifeChanged"]
+[connection signal="MannaChanged" from="Player" to="PlayerHud" method="OnMannaChanged"]
