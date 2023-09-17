@@ -1,9 +1,9 @@
 [gd_scene load_steps=36 format=3 uid="uid://xng4kcqtkqps"]
 
 [ext_resource type="Script" path="res://Scripts/Player/PlayerController.cs" id="1_ml4th"]
-[ext_resource type="Texture2D" uid="uid://c3aigjkibqayx" path="res://Assets/Actor/Characters/GreenNinja/SeparateAnim/Dead.png" id="2_07c41"]
-[ext_resource type="Texture2D" uid="uid://nijovmisbo12" path="res://Assets/Actor/Characters/GreenNinja/SeparateAnim/Idle.png" id="2_ihww8"]
-[ext_resource type="Texture2D" uid="uid://barnc08ba4toa" path="res://Assets/Actor/Characters/GreenNinja/SeparateAnim/Walk.png" id="2_y37gs"]
+[ext_resource type="Texture2D" uid="uid://cb65a5gul0vhp" path="res://Assets/Actor/Characters/GreenNinja/SeparateAnim/Dead.png" id="2_07c41"]
+[ext_resource type="Texture2D" uid="uid://ch4bm7er245wx" path="res://Assets/Actor/Characters/GreenNinja/SeparateAnim/Idle.png" id="2_ihww8"]
+[ext_resource type="Texture2D" uid="uid://bebbtbuwnnn1d" path="res://Assets/Actor/Characters/GreenNinja/SeparateAnim/Walk.png" id="2_y37gs"]
 [ext_resource type="Script" path="res://Scripts/Player/PlayerAnimations.cs" id="5_jldw1"]
 [ext_resource type="Script" path="res://Scripts/Player/PlayerLife.cs" id="5_qfvbd"]
 [ext_resource type="Script" path="res://Scripts/Player/PlayerManna.cs" id="7_kvcyy"]
@@ -566,7 +566,6 @@ blend_point_3/pos = Vector2(2.08167e-14, -1)
 blend_mode = 1
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_hknjj"]
-advance_mode = 2
 advance_condition = &"defeated"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_j20pe"]
@@ -601,8 +600,7 @@ shape = SubResource("RectangleShape2D_oj5hc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(4, 4)
-texture = ExtResource("2_ihww8")
-hframes = 4
+texture = ExtResource("2_07c41")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Sprite2D")
@@ -617,7 +615,7 @@ parameters/conditions/defeated = false
 parameters/conditions/idle = false
 parameters/conditions/walking = false
 parameters/Idle/blend_position = Vector2(0, 0)
-parameters/Walking/blend_position = Vector2(2.08165e-12, 2.08165e-12)
+parameters/Walking/blend_position = Vector2(0.9968, -0.005988)
 script = ExtResource("5_jldw1")
 PlayerController = NodePath("..")
 

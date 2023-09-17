@@ -10,7 +10,7 @@ Player = NodePath("Player")
 PlayerSpawnPoint = NodePath("SpawnPoint")
 
 [node name="Player" parent="." instance=ExtResource("1_ynbnj")]
-position = Vector2(464, 325)
+position = Vector2(583, 253)
 
 [node name="PlayerHud" parent="." instance=ExtResource("2_1gkgk")]
 

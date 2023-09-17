@@ -2,7 +2,8 @@ using Godot;
 
 namespace NinjaAdventure.Scripts.Player;
 
-public partial class PlayerAnimations : AnimationTree {
+public partial class PlayerAnimations : AnimationTree
+{
   private static readonly StringName WalkingParams = "parameters/Walking/blend_position";
   private static readonly StringName IdleParams = "parameters/Idle/blend_position";
 
@@ -17,10 +18,13 @@ public partial class PlayerAnimations : AnimationTree {
 
   public override void _Process(double delta) => UpdateAnimation();
 
-  private void UpdateAnimation() {
-    SetIdle();
+  private void UpdateAnimation()
+  {
+    if (!(bool)Get(Defeated))
+      SetIdle();
 
-    if (!PlayerController.IsMoving) return;
+    if (!PlayerController.IsMoving)
+      return;
 
     SetWalking();
     SetCoordinates(PlayerController.Velocity);
@@ -28,27 +32,32 @@ public partial class PlayerAnimations : AnimationTree {
 
   private void OnPlayerDefeated() => SetDefeated();
 
-  private void SetCoordinates(Vector2 coordinates) {
+  private void SetCoordinates(Vector2 coordinates)
+  {
     Set(IdleParams, coordinates);
     Set(WalkingParams, coordinates);
   }
 
-  private void SetDefeated() {
+  private void SetDefeated()
+  {
     Reset();
     Set(Defeated, true);
   }
 
-  private void SetIdle() {
+  private void SetIdle()
+  {
     Reset();
     Set(Idle, true);
   }
 
-  private void SetWalking() {
+  private void SetWalking()
+  {
     Reset();
     Set(Walking, true);
   }
 
-  private void Reset() {
+  private void Reset()
+  {
     Set(Idle, false);
     Set(Walking, false);
     Set(Defeated, false);

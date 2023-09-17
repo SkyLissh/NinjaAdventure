@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bf73vacivhup6"]
 
 [ext_resource type="Script" path="res://Scripts/HUD/PlayerHud.cs" id="1_2gse5"]
-[ext_resource type="Texture2D" uid="uid://cwtv3hvt8nqdq" path="res://Assets/Actor/Characters/GreenNinja/Faceset.png" id="1_f77xa"]
+[ext_resource type="Texture2D" uid="uid://b6lovwv6j3x26" path="res://Assets/Actor/Characters/GreenNinja/Faceset.png" id="1_f77xa"]
 [ext_resource type="PackedScene" uid="uid://t4ovdrfx1ocq" path="res://Widgets/LifeBar.tscn" id="2_ygkqf"]
 [ext_resource type="PackedScene" uid="uid://clh1fqmkfbbot" path="res://Widgets/MannaBar.tscn" id="3_77ban"]
 

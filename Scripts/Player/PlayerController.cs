@@ -16,18 +16,18 @@ public partial class PlayerController : CharacterBody2D {
   public bool IsMoving => _velocity != Vector2.Zero;
 
   public override void _PhysicsProcess(double delta) {
-    if (PlayerLife.IsDefeated) {
-      if (IsMoving) _velocity = Vector2.Zero;
-      return;
-    }
+	if (PlayerLife.IsDefeated) {
+	  if (IsMoving) _velocity = Vector2.Zero;
+	  return;
+	}
 
-    _velocity = Velocity;
+	_velocity = Velocity;
 
-    _velocity.Y = Input.GetAxis("up", "down");
-    _velocity.X = Input.GetAxis("left", "right");
+	_velocity.Y = Input.GetAxis("up", "down");
+	_velocity.X = Input.GetAxis("left", "right");
 
-    Velocity = _velocity.Normalized() * Speed;
-    MoveAndSlide();
+	Velocity = _velocity.Normalized() * Speed;
+	MoveAndSlide();
   }
 
   private void OnLifeChanged(int life) => EmitSignal(SignalName.LifeChanged, life);
